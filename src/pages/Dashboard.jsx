@@ -17,7 +17,7 @@ export default function Dashboard(){
 
     return (
         <div>
-        <div className=" grid grid-cols-3 gap-4 mb-6 items-start">
+        <div className=" grid grid-cols-3 gap-2 mb-4 md:gap-4 md:mb-6 ">
             <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow text-center ">
        
         
@@ -33,7 +33,7 @@ export default function Dashboard(){
 <p className ="text-3xl font-bold text-green-500">{todaysRevisions}</p>
            </div>
            </div>
-           <div  className="grid grid-cols-2 gap-6 mb-6  items-start">
+           <div  className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6  items-start">
             <div className="flex flex-col gap-6">
            <AddproblemForm/>
            <ProblemList />
