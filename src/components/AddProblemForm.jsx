@@ -3,6 +3,7 @@ import {useProblems} from "../context/ProblemContext"
 
 export default function AddProblemForm(){
     const {addProblem} = useProblems()
+    const today = new Date().toISOString().split('T')[0]
     const [formData, setFormData] = useState({
         title: "",
         topic : "",
@@ -10,7 +11,7 @@ export default function AddProblemForm(){
         pattern :"",
         notes : "",
         tags : "",
-        dateSolved : ""
+        dateSolved : today
 
     })
 
