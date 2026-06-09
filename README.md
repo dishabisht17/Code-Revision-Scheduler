@@ -1,16 +1,41 @@
-# React + Vite
+# Code Revision Scheduler
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A DSA spaced-repetition revision scheduler built with React and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Live Demo
+[code-revision-scheduler.vercel.app](https://code-revision-scheduler.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About
+Code Revision Scheduler helps competitive programmers and placement aspirants remember solved DSA problems using spaced repetition — a proven memory technique for effective learning .
 
-## React Compiler
+Instead of randomly revising problems, the app schedules revisions at optimal intervals: 1 → 3 → 7 → 15 → 30 days. Based on how well you remember each problem, the interval adjusts dynamically.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
+- Add DSA problems with topic, difficulty, pattern, notes and tags
+- Automatic revision scheduling using spaced repetition algorithm
+- Recall tracking — mark each revision as Easy, Medium, Hard, or Forgot
+- Dynamic interval adjustment based on recall quality
+- Dashboard with today's revisions, total problems, and stats
+- Analytics showing weakest topics and recall success rate
+- Delete problems
+- Data persists using localStorage
+- Fully responsive — works on mobile and desktop
 
-## Expanding the ESLint configuration
+## Tech Stack
+- React
+- Tailwind CSS
+- JavaScript
+- localStorage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How It Works
+1. Add a solved DSA problem
+2. App schedules first revision for next day
+3. After each revision, mark your recall quality
+4. App adjusts next revision date based on your response
+5. Easy → interval increases, Forgot → resets to day 1
+
+## Run Locally
+```
+npm install
+npm run dev
+```
