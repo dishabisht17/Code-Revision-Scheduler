@@ -7,7 +7,7 @@ export default function Dashboard(){
     const {problems}  = useProblems()
     const totalProblems = problems.length
     const today = new Date().toISOString().split('T')[0]
-    const dueTodayCount = problems.filter(p=>p.nextRevisionDate === today).length
+    const dueTodayCount = problems.filter(p=>p.nextRevisionDate <= today).length
     let todaysRevisions = 0
     problems.forEach(p => {
         p.revisionHistory?.forEach(entry=> {

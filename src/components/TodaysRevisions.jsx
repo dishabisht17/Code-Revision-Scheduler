@@ -5,7 +5,7 @@ const {problems} = useProblems()
 const today = new Date().toISOString().split('T')[0]
 
 
-const todaysProblems = problems.filter(problem => problem.nextRevisionDate === today)
+const todaysProblems = problems.filter(problem => problem.nextRevisionDate <= today)
 
 return (
     <div className ="bg-white/80 backgound-blur-sm rounded-lg p-6 shadow mb-6 h-fit">

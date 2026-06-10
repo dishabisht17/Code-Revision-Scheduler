@@ -31,10 +31,7 @@ function handleSubmit(){
         alert("Please select Difficulty")
         return
     }
-     if(!formData.dateSolved){
-        alert("Please select a Date")
-        return
-    }
+     
      if(!formData.topic.trim()){
         alert("Please enter a Topic")
         return
