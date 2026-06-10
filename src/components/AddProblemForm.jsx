@@ -52,7 +52,7 @@ function handleSubmit(){
         pattern : "",
         notes : "",
         tags : "",
-        dateSolved : "",
+        dateSolved : today,
     })
 }
     return (
