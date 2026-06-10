@@ -23,6 +23,26 @@ export default function AddProblemForm(){
         })
     }
 function handleSubmit(){
+    if(!formData.title.trim()){
+        alert("Please enter a Title")
+        return
+    }
+     if(!formData.difficulty){
+        alert("Please select Difficulty")
+        return
+    }
+     if(!formData.dateSolved){
+        alert("Please select a Date")
+        return
+    }
+     if(!formData.topic.trim()){
+        alert("Please enter a Topic")
+        return
+    }
+     if(!formData.pattern.trim()){
+        alert("Please enter a Pattern")
+        return
+    }
     
     addProblem(formData)
     setFormData ({
